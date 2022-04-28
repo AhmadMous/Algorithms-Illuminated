@@ -2,9 +2,12 @@ powers_of_2 = [2 ** i for i in range(8)]
 
 # Finds next power of 2
 def next_2s_power(r):
+
+    # r is already a power of 2
     if r in powers_of_2:
         return r
 
+    # find the next power of 2
     for power in powers_of_2:
         if r < power:
             return power
