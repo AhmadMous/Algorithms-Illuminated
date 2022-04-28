@@ -1,6 +1,9 @@
-ilist = [1,14,3,57,5,6,8,9,434,43,13,54,1,2,1,2]
-
+# Recursively find the 2 largest numbers in a list by D&C
+# The list is split into 2 sublists and each is processed to get 2 largest elements
+# The elements from the 2 lists of 2 elements are then compared to get 2 largest numebrs across all
 def find_secondL(list):
+
+    # List of indices that facilitates work, without worrying of index change when slicing
     index_list = [i for i in range(len(list))]
 
     # Returns a list of indices of 2 biggest numbers
@@ -23,10 +26,13 @@ def find_secondL(list):
         # Return the resultant list
         return result
 
+
     # Returns list of indexes in decreasing order of their containing numbers
     def highest_pair(number_1, number_2):
         return [number_2, number_1] if list[number_2] > list[number_1] else [number_1, number_2]
 
+
+    # Recursively finds the  indices of the 2 largest numbers in a list
     def second_largest(index_list):
 
         # Handles base case of 2 input elements
@@ -44,4 +50,5 @@ def find_secondL(list):
 
     return second_largest(index_list)
         
+ilist = [1,14,3,57,5,6,8,9,434,43,13,54,1,2,1,2]
 find_secondL(ilist)
