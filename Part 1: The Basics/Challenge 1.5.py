@@ -1,6 +1,6 @@
 # Recursively find the 2 largest numbers in a list by D&C
-# The list is split into 2 sublists and each is processed to get 2 largest elements
-# The elements from the 2 lists of 2 elements are then compared to get 2 largest numebrs across all
+# This is unnecessarily complicated, but is useful practice for D&C
+
 def find_secondL(list):
 
     # List of indices that facilitates work, without worrying of index change when slicing
